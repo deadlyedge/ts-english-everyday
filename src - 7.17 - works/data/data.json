@@ -1,0 +1,761 @@
+[
+  {
+    "meta": {
+      "id": "DO",
+      "uuid": "74653f3b-fd03-4b72-af98-24bb826e6fa2",
+      "src": "sch_dict",
+      "section": "abbr",
+      "stems": ["do"],
+      "offensive": false
+    },
+    "hwi": { "hw": "DO" },
+    "fl": "abbreviation",
+    "def": [
+      { "sseq": [[["sense", { "dt": [["text", "doctor of osteopathy"]] }]]] }
+    ],
+    "shortdef": ["doctor of osteopathy"]
+  },
+  {
+    "meta": {
+      "id": "do:1",
+      "uuid": "6f896378-09ee-4a43-8c43-4c6bfc95e71e",
+      "src": "sch_dict",
+      "section": "alpha",
+      "stems": [
+        "do",
+        "did",
+        "did for",
+        "did with",
+        "do a number on",
+        "do away with",
+        "do by",
+        "do for",
+        "do it",
+        "do justice",
+        "do proud",
+        "do the trick",
+        "do with",
+        "doable",
+        "does",
+        "does for",
+        "does with",
+        "doing",
+        "doing for",
+        "doing with",
+        "done",
+        "done for",
+        "done with",
+        "to do"
+      ],
+      "offensive": false
+    },
+    "hom": 1,
+    "hwi": {
+      "hw": "do",
+      "prs": [
+        { "mw": "d\u00fc", "sound": { "audio": "do000001" } },
+        { "mw": "\u02c8d\u00fc" }
+      ]
+    },
+    "fl": "verb",
+    "ins": [
+      {
+        "if": "did",
+        "prs": [
+          { "mw": "did", "sound": { "audio": "do000002" } },
+          { "mw": "\u02c8did" },
+          { "mw": "d\u0259d" }
+        ]
+      },
+      {
+        "if": "done",
+        "prs": [{ "mw": "\u02c8d\u0259n", "sound": { "audio": "do000003" } }]
+      },
+      {
+        "if": "do*ing",
+        "prs": [{ "mw": "\u02c8d\u00fc-ing", "sound": { "audio": "do000004" } }]
+      },
+      {
+        "if": "does",
+        "prs": [
+          { "mw": "d\u0259z", "sound": { "audio": "do000005" } },
+          { "mw": "\u02c8d\u0259z" }
+        ]
+      }
+    ],
+    "def": [
+      {
+        "sseq": [
+          [
+            [
+              "sense",
+              {
+                "sn": "1 a",
+                "dt": [
+                  ["text", "{bc}to carry out {bc}{sx|perform||} "],
+                  [
+                    "vis",
+                    [
+                      { "t": "{it}do{/it} some work" },
+                      { "t": "{it}do{/it} me a favor" }
+                    ]
+                  ]
+                ]
+              }
+            ],
+            [
+              "sense",
+              {
+                "sn": "b",
+                "dt": [
+                  ["text", "{bc}to work on "],
+                  ["vis", [{ "t": "{it}doing{/it} a puzzle" }]]
+                ]
+              }
+            ]
+          ],
+          [
+            [
+              "sense",
+              {
+                "sn": "2",
+                "dt": [
+                  ["text", "{bc}{sx|act||}, {sx|behave||} "],
+                  [
+                    "vis",
+                    [{ "t": "{it}do{/it} as I say, not as I {it}do{/it}" }]
+                  ]
+                ]
+              }
+            ]
+          ],
+          [
+            [
+              "sense",
+              {
+                "sn": "3 a",
+                "dt": [
+                  ["text", "{bc}to affect in a usually specified way "],
+                  ["vis", [{ "t": "it might {it}do{/it} you good" }]]
+                ]
+              }
+            ],
+            [
+              "sense",
+              {
+                "sn": "b",
+                "dt": [
+                  [
+                    "text",
+                    "{bc}to act so as to cause or create a feeling or sense of "
+                  ],
+                  [
+                    "vis",
+                    [{ "t": "{it}do{/it} honor to a soldier\u0027s memory" }]
+                  ]
+                ]
+              }
+            ]
+          ],
+          [
+            [
+              "sense",
+              {
+                "sn": "4 a",
+                "dt": [
+                  [
+                    "text",
+                    "{bc}to be successful {bc}get along {bc}{sx|flourish||} "
+                  ],
+                  ["vis", [{ "t": "not {it}doing{/it} very well in school" }]]
+                ]
+              }
+            ],
+            [
+              "sense",
+              {
+                "sn": "b",
+                "dt": [
+                  ["text", "{bc}to be in regard to health {bc}{sx|feel||} "],
+                  ["vis", [{ "t": "{it}doing{/it} well after the operation" }]]
+                ]
+              }
+            ]
+          ],
+          [
+            [
+              "sense",
+              {
+                "sn": "5",
+                "dt": [
+                  [
+                    "text",
+                    "{bc}to carry on in one\u0027s affairs {bc}{sx|manage||} "
+                  ],
+                  ["vis", [{ "t": "can {it}do{/it} without your help" }]]
+                ]
+              }
+            ]
+          ],
+          [
+            [
+              "sense",
+              {
+                "sn": "6",
+                "dt": [
+                  ["text", "{bc}to take place {bc}{sx|happen||} "],
+                  ["vis", [{ "t": "see what\u0027s {it}doing{/it} tonight" }]]
+                ]
+              }
+            ]
+          ],
+          [
+            [
+              "sense",
+              {
+                "sn": "7",
+                "dt": [
+                  ["text", "{bc}to come or bring to an end {bc}{sx|finish||} "],
+                  [
+                    "uns",
+                    [
+                      [
+                        ["text", "used in the past participle "],
+                        ["vis", [{ "t": "the work is finally {it}done{/it}" }]]
+                      ]
+                    ]
+                  ]
+                ]
+              }
+            ]
+          ],
+          [
+            [
+              "sense",
+              {
+                "sn": "8",
+                "dt": [
+                  ["text", "{bc}to put forth (as an effort) "],
+                  ["vis", [{ "t": "{it}do{/it} your best to win" }]]
+                ]
+              }
+            ]
+          ],
+          [
+            [
+              "sense",
+              {
+                "sn": "9",
+                "dt": [
+                  ["text", "{bc}to be about one\u0027s work or duty "],
+                  ["vis", [{ "t": "up and {it}doing{/it}" }]]
+                ]
+              }
+            ]
+          ],
+          [
+            [
+              "sense",
+              {
+                "sn": "10",
+                "dt": [
+                  ["text", "{bc}to produce by creative effort "],
+                  ["vis", [{ "t": "{it}do{/it} a sketch" }]]
+                ]
+              }
+            ]
+          ],
+          [
+            [
+              "sense",
+              {
+                "sn": "11 a",
+                "dt": [
+                  ["text", "{bc}to take suitable action on "],
+                  ["vis", [{ "t": "{it}did{/it} the dishes" }]]
+                ]
+              }
+            ],
+            [
+              "sense",
+              {
+                "sn": "b",
+                "dt": [
+                  ["text", "{bc}{sx|set||12} "],
+                  ["vis", [{ "t": "must {it}do{/it} my hair" }]]
+                ]
+              }
+            ]
+          ],
+          [
+            [
+              "sense",
+              {
+                "sn": "12",
+                "dt": [
+                  ["text", "{bc}{sx|decorate||}, {sx|furnish||} "],
+                  ["vis", [{ "t": "{it}did{/it} the bedroom in blue" }]]
+                ]
+              }
+            ]
+          ],
+          [
+            [
+              "sense",
+              {
+                "sn": "13",
+                "dt": [
+                  ["text", "{bc}to work at as a vocation "],
+                  ["vis", [{ "t": "what one {it}does{/it} for a living" }]]
+                ]
+              }
+            ]
+          ],
+          [
+            [
+              "sense",
+              {
+                "sn": "14 a",
+                "dt": [
+                  ["text", "{bc}to travel at a speed of "],
+                  ["vis", [{ "t": "{it}doing{/it} 55 miles per hour" }]]
+                ]
+              }
+            ],
+            [
+              "sense",
+              {
+                "sn": "b",
+                "dt": [
+                  [
+                    "text",
+                    "{bc}to visit and explore as or as if sightseeing {bc}enjoy the sights and attractions of "
+                  ],
+                  [
+                    "vis",
+                    [
+                      { "t": "{it}did{/it} Europe last fall" },
+                      { "t": "{it}doing{/it} the town" }
+                    ]
+                  ]
+                ]
+              }
+            ]
+          ],
+          [
+            [
+              "sense",
+              {
+                "sn": "15",
+                "dt": [
+                  [
+                    "text",
+                    "{bc}to be suitable to the needs of {bc}{sx|serve||} "
+                  ],
+                  ["vis", [{ "t": "worms will {it}do{/it} us for bait" }]]
+                ]
+              }
+            ]
+          ],
+          [
+            [
+              "sense",
+              {
+                "sn": "16",
+                "dt": [
+                  ["text", "{bc}to serve out (a period of imprisonment) "],
+                  [
+                    "vis",
+                    [{ "t": "{it}doing{/it} 20 years for armed robbery" }]
+                  ]
+                ]
+              }
+            ]
+          ],
+          [
+            [
+              "sense",
+              {
+                "sn": "17",
+                "dt": [
+                  [
+                    "text",
+                    "{bc}to be approved of especially by custom, propriety, or opinion {bc}be fitting or appropriate "
+                  ],
+                  [
+                    "uns",
+                    [
+                      [
+                        ["text", "usually used in the negative "],
+                        [
+                          "vis",
+                          [{ "t": "it just won\u0027t {it}do{/it} to be late" }]
+                        ]
+                      ]
+                    ]
+                  ]
+                ]
+              }
+            ]
+          ],
+          [
+            [
+              "sense",
+              {
+                "sn": "18",
+                "dt": [
+                  [
+                    "uns",
+                    [
+                      [
+                        [
+                          "text",
+                          "used as a substitute verb to avoid repetition "
+                        ],
+                        [
+                          "vis",
+                          [
+                            {
+                              "t": "wanted to run and play as children {it}do{/it}"
+                            }
+                          ]
+                        ]
+                      ]
+                    ]
+                  ]
+                ]
+              }
+            ]
+          ],
+          [
+            [
+              "sense",
+              {
+                "sn": "19",
+                "dt": [
+                  [
+                    "uns",
+                    [
+                      [
+                        [
+                          "text",
+                          "used as an auxiliary verb (1) before the subject of an interrogative sentence "
+                        ],
+                        ["vis", [{ "t": "{it}do{/it} you work?" }]],
+                        ["text", " and after certain adverbs "],
+                        [
+                          "vis",
+                          [
+                            { "t": "rarely {it}do{/it} I go out" },
+                            { "t": "they work and so {it}do{/it} I" }
+                          ]
+                        ],
+                        ["text", ", (2) in a negative statement "],
+                        ["vis", [{ "t": "you {it}don\u0027t{/it} look well" }]],
+                        ["text", ", (3) for emphasis "],
+                        ["vis", [{ "t": "{it}do{/it} be careful" }]],
+                        [
+                          "text",
+                          ", and (4) as a substitute for a preceding verb or verb phrase "
+                        ],
+                        [
+                          "vis",
+                          [{ "t": "this looks better than that {it}does{/it}" }]
+                        ]
+                      ]
+                    ]
+                  ]
+                ]
+              }
+            ]
+          ]
+        ]
+      }
+    ],
+    "dros": [
+      {
+        "drp": "do away with",
+        "def": [
+          {
+            "sseq": [
+              [
+                [
+                  "sense",
+                  {
+                    "sn": "1",
+                    "dt": [["text", "{bc}to put an end to {bc}{sx|abolish||}"]]
+                  }
+                ]
+              ],
+              [
+                [
+                  "sense",
+                  {
+                    "sn": "2",
+                    "dt": [["text", "{bc}to put to death {bc}{sx|kill||}"]]
+                  }
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "drp": "do by",
+        "def": [
+          {
+            "sseq": [
+              [
+                [
+                  "sense",
+                  {
+                    "dt": [
+                      ["text", "{bc}to deal with {bc}{sx|treat||} "],
+                      ["vis", [{ "t": "{it}did{/it} well {it}by{/it} us" }]]
+                    ]
+                  }
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "drp": "do justice",
+        "def": [
+          {
+            "sseq": [
+              [["sense", { "sn": "1", "dt": [["text", "{bc}to act justly"]] }]],
+              [
+                [
+                  "sense",
+                  { "sn": "2", "dt": [["text", "{bc}to treat fairly"]] }
+                ]
+              ],
+              [
+                [
+                  "sense",
+                  {
+                    "sn": "3",
+                    "dt": [["text", "{bc}to show proper appreciation for"]]
+                  }
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "drp": "do proud",
+        "def": [
+          {
+            "sseq": [
+              [
+                [
+                  "sense",
+                  {
+                    "dt": [
+                      ["text", "{bc}to give cause for pride or gratification"]
+                    ]
+                  }
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "drp": "do the trick",
+        "def": [
+          {
+            "sseq": [
+              [
+                [
+                  "sense",
+                  { "dt": [["text", "{bc}to produce the desired result"]] }
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "drp": "do with",
+        "def": [
+          {
+            "sseq": [
+              [
+                [
+                  "sense",
+                  {
+                    "dt": [
+                      ["text", "{bc}to make good use of {bc}benefit by "],
+                      ["vis", [{ "t": "could {it}do with{/it} a snack" }]]
+                    ]
+                  }
+                ]
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "et": [["text", "Old English {it}d\u014dn{/it}"]],
+    "shortdef": ["to carry out : perform", "to work on", "act, behave"]
+  },
+  {
+    "meta": {
+      "id": "do:2",
+      "uuid": "fc7b7673-7453-4646-8ca0-da3e6d1e71dd",
+      "src": "sch_dict",
+      "section": "alpha",
+      "stems": ["do", "do\u0027s", "doo-doo", "dos"],
+      "offensive": false
+    },
+    "hom": 2,
+    "hwi": {
+      "hw": "do",
+      "prs": [{ "mw": "\u02c8d\u014d", "sound": { "audio": "do000007" } }]
+    },
+    "fl": "noun",
+    "def": [
+      {
+        "sseq": [
+          [
+            [
+              "sense",
+              { "dt": [["text", "{bc}the 1st note of the diatonic scale"]] }
+            ]
+          ]
+        ]
+      }
+    ],
+    "et": [["text", "Italian"]],
+    "shortdef": ["the 1st note of the diatonic scale"]
+  },
+  {
+    "meta": {
+      "id": "did",
+      "uuid": "9ea3f6a2-f330-427f-8456-fcd5ea0bcf34",
+      "src": "sch_dict",
+      "section": "alpha",
+      "stems": ["did", "do"],
+      "offensive": false
+    },
+    "hwi": { "hw": "did" },
+    "cxs": [{ "cxl": "past of", "cxtis": [{ "cxt": "do" }] }],
+    "shortdef": []
+  },
+  {
+    "meta": {
+      "id": "didst",
+      "uuid": "d5070302-606e-4801-84c6-3acc258dd7a2",
+      "src": "sch_dict",
+      "section": "alpha",
+      "stems": ["didst", "do"],
+      "offensive": false
+    },
+    "hwi": {
+      "hw": "didst",
+      "prs": [
+        { "mw": "didst", "sound": { "audio": "didst001" } },
+        { "mw": "\u02c8didst" }
+      ]
+    },
+    "cxs": [
+      { "cxl": "archaic past 2nd singular of", "cxtis": [{ "cxt": "do" }] }
+    ],
+    "shortdef": []
+  },
+  {
+    "meta": {
+      "id": "does",
+      "uuid": "1d99f0b4-420e-4096-8237-a717385daf57",
+      "src": "sch_dict",
+      "section": "alpha",
+      "stems": ["does", "do", "doe"],
+      "offensive": false
+    },
+    "hwi": { "hw": "does" },
+    "cxs": [{ "cxl": "present 3rd singular of", "cxtis": [{ "cxt": "do" }] }],
+    "shortdef": []
+  },
+  {
+    "meta": {
+      "id": "doest",
+      "uuid": "b269b774-39ee-4fb1-8028-6a76196045a0",
+      "src": "sch_dict",
+      "section": "alpha",
+      "stems": ["doest", "do"],
+      "offensive": false
+    },
+    "hwi": {
+      "hw": "do*est",
+      "prs": [
+        { "mw": "\u02c8d\u00fc-\u0259st", "sound": { "audio": "doest001" } }
+      ]
+    },
+    "cxs": [
+      { "cxl": "archaic present 2nd singular of", "cxtis": [{ "cxt": "do" }] }
+    ],
+    "shortdef": []
+  },
+  {
+    "meta": {
+      "id": "doeth",
+      "uuid": "005ebbdd-cd6c-4876-a70f-e428c4142832",
+      "src": "sch_dict",
+      "section": "alpha",
+      "stems": ["doeth", "do"],
+      "offensive": false
+    },
+    "hwi": {
+      "hw": "do*eth",
+      "prs": [
+        { "mw": "\u02c8d\u00fc-\u0259th", "sound": { "audio": "doeth001" } }
+      ]
+    },
+    "cxs": [
+      { "cxl": "archaic present 3rd singular of", "cxtis": [{ "cxt": "do" }] }
+    ],
+    "shortdef": []
+  },
+  {
+    "meta": {
+      "id": "done:1",
+      "uuid": "640f810e-549a-4ad9-adb4-52aaa654e510",
+      "src": "sch_dict",
+      "section": "alpha",
+      "stems": ["done", "do"],
+      "offensive": false
+    },
+    "hom": 1,
+    "hwi": {
+      "hw": "done",
+      "prs": [{ "mw": "\u02c8d\u0259n", "sound": { "audio": "done0001" } }]
+    },
+    "cxs": [{ "cxl": "past participle of", "cxtis": [{ "cxt": "do" }] }],
+    "shortdef": []
+  },
+  {
+    "meta": {
+      "id": "dost",
+      "uuid": "a090c396-0096-4d29-8ca5-711d6c663950",
+      "src": "sch_dict",
+      "section": "alpha",
+      "stems": ["dost", "do"],
+      "offensive": false
+    },
+    "hwi": {
+      "hw": "dost",
+      "prs": [
+        { "mw": "d\u0259st", "sound": { "audio": "dost0001" } },
+        { "mw": "\u02c8d\u0259st" }
+      ]
+    },
+    "cxs": [
+      { "cxl": "archaic present 2nd singular of", "cxtis": [{ "cxt": "do" }] }
+    ],
+    "shortdef": []
+  }
+]
