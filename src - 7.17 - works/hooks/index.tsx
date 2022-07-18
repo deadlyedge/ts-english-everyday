@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 
 function useTranslate(ask: string): string {
   // use microsoft azure translate api
-  const subscriptionKey = "ebd8cfcf6359400ea44c6d875a954411"
+  const subscriptionKey = ''
   const location = "japaneast"
   const endpoint = "https://api.cognitive.microsofttranslator.com"
 
@@ -73,7 +73,7 @@ function useToday(id: string = uuid()): string {
 
 function useImage(ask: string): string {
   const API = "https://pixabay.com/api/"
-  const key = "28651194-e7b0eff77fe9bf3c90cc80bbf"
+  const key = ''
   const params = {
     key,
     q: ask,
@@ -109,7 +109,7 @@ function useImage(ask: string): string {
 }
 
 function useDeepLTranslate(ask: string): string {
-  const auth_key = "39dacf2e-dc51-e5d1-2e40-fd2194cef05f:fx"
+  const auth_key = ''
   const API = "https://api-free.deepl.com/v2/translate"
   const params = {
     auth_key,
