@@ -7,7 +7,7 @@ import CardHeader from "./CardHeader"
 interface ICardItem {
   item: Card
   removeCard: (id: string) => void
-  updateCard: (id: string, data: string) => void
+  updateCard: (card: Card) => void
 }
 
 const CardItem: FC<ICardItem> = ({

@@ -4,7 +4,7 @@ import { getDeepLTranslate, getAzureTranslate } from "../utils/getAPIs"
 
 interface ICardItem {
   item: Card
-  updateCard: (id: string, data: string) => void
+  updateCard: (card: Card) => void
 }
 
 const CardBody: FC<ICardItem> = ({ item, updateCard }): ReactElement => {
@@ -20,14 +20,14 @@ const CardBody: FC<ICardItem> = ({ item, updateCard }): ReactElement => {
 
   function handleSubmit(event: React.KeyboardEvent<HTMLTextAreaElement>) {
     if (event.code == "Enter" && userInput.trim() != "") {
-      updateCard(item.id, userInput.trim())
+      updateCard({ ...item, ask: userInput.trim() })
       setAsk(userInput.trim())
     }
   }
 
   function handleOnBlur() {
     if (userInput.trim() != "") {
-      updateCard(item.id, userInput.trim())
+      updateCard({ ...item, ask: userInput.trim() })
       setAsk(userInput.trim())
     }
   }
