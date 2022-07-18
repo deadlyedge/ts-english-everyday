@@ -9,7 +9,6 @@ interface ICardItem {
 
 const CardBody: FC<ICardItem> = ({ item, updateCard }): ReactElement => {
   const [userInput, setUserInput] = useState<string>(item.ask)
-  const [ask, setAsk] = useState<string>(item.ask)
   const [translated, setTranslate] = useState("")
   const [translated2, setTranslate2] = useState("")
 
@@ -21,25 +20,23 @@ const CardBody: FC<ICardItem> = ({ item, updateCard }): ReactElement => {
   function handleSubmit(event: React.KeyboardEvent<HTMLTextAreaElement>) {
     if (event.code == "Enter" && userInput.trim() != "") {
       updateCard({ ...item, ask: userInput.trim() })
-      setAsk(userInput.trim())
     }
   }
 
   function handleOnBlur() {
     if (userInput.trim() != "") {
       updateCard({ ...item, ask: userInput.trim() })
-      setAsk(userInput.trim())
     }
   }
 
   useEffect(() => {
-    getDeepLTranslate(ask).then((response) => {
+    getDeepLTranslate(item.ask).then((response) => {
       setTranslate2(response)
     })
-    getAzureTranslate(ask).then((response) => {
+    getAzureTranslate(item.ask).then((response) => {
       setTranslate(response)
     })
-  }, [ask])
+  }, [item.ask])
 
   return (
     <div className='p-5 pb-0 pt-2'>
