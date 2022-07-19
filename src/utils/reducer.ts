@@ -1,4 +1,4 @@
-import { ACTION_TYPE, IAction, IState, Card } from "../types";
+import { ACTION_TYPE, IAction, IState, Card, Tag, TagModifier } from "../types";
 
 function cardReducer(state: IState, action: IAction): IState {
   const { type, payload } = action
@@ -21,16 +21,31 @@ function cardReducer(state: IState, action: IAction): IState {
       }
     case ACTION_TYPE.CHANGE_TAG:
       return {
-        ...state
+        ...state,
+        cardList: state.cardList.map((card: Card) =>
+          card.id === (payload as TagModifier).id
+            ? {
+              ...card,
+              tags: card.tags.map((tag: Tag) =>
+                (tag.tagName === (payload as TagModifier).tagName)
+                  ? { ...tag, tagStatus: true }
+                  : { ...tag, tagStatus: false }
+              )
+            }
+            : { ...card }
+        )
       }
     case ACTION_TYPE.UPDATE_CARD:
       return {
         ...state,
-        cardList: state.cardList.map((card: Card) => {
-          return (card.id === (payload as Card).id)
-            ? { ...card, ask: (payload as Card).ask }
+        cardList: state.cardList.map((card: Card) =>
+          (card.id === (payload as Card).id)
+            ? {
+              ...card,
+              ask: (payload as Card).ask
+            }
             : { ...card }
-        })
+        )
       }
     default:
       return state

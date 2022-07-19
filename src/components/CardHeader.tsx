@@ -4,15 +4,15 @@ import { getImage } from "../utils/getAPIs"
 import { getSummary } from "../utils/getSummary"
 
 interface ICardItem {
-  item: Card
+  card: Card
   removeCard: (id: string) => void
 }
 
-const CardHeader: FC<ICardItem> = ({ item, removeCard }): ReactElement => {
+const CardHeader: FC<ICardItem> = ({ card, removeCard }): ReactElement => {
   const [image, setImage] = useState("")
   useEffect(() => {
-    getImage(getSummary(item.ask)).then((response) => setImage(response))
-  }, [item.ask])
+    getImage(getSummary(card.ask)).then((response) => setImage(response))
+  }, [card.ask])
   return (
     <div
       className='bg-cover bg-center rounded-t-lg h-40 relative'
@@ -23,7 +23,7 @@ const CardHeader: FC<ICardItem> = ({ item, removeCard }): ReactElement => {
         <button
           type='button'
           className='bg-white bg-opacity-20 text-red-600 border-2 border-red-600 hover:bg-red-500 hover:text-white hover:rotate-90 hover:scale-125 rounded-full p-2 mr-2 duration-500'
-          onClick={() => removeCard(item.id)}>
+          onClick={() => removeCard(card.id)}>
           <svg
             className='w-4 h-4'
             fill='currentColor'

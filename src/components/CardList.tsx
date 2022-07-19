@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useReducer } from "react"
-import { ACTION_TYPE, Card } from "../types"
+import { ACTION_TYPE, Card, TagModifier } from "../types"
 import { init, initCard } from "../utils/init"
 import { cardReducer } from "../utils/reducer"
 import CardAdd from "./CardAdd"
@@ -41,14 +41,22 @@ const CardList = () => {
     })
   }, [])
 
+  const changeTag = useCallback((tagModifier: TagModifier) => {
+    dispatch({
+      type: ACTION_TYPE.CHANGE_TAG,
+      payload: tagModifier,
+    })
+  }, [])
+
   return (
     <div className='flex flex-wrap items-start justify-center'>
-      {state.cardList.map((item: Card) => (
+      {state.cardList.map((card: Card) => (
         <CardItem
-          key={item.id}
-          item={item}
+          key={card.id}
+          card={card}
           removeCard={removeCard}
           updateCard={updateCard}
+          changeTag={changeTag}
         />
       ))}
       <CardAdd addNewCard={addNewCard} />

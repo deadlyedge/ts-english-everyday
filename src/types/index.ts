@@ -20,9 +20,14 @@ export interface IState {
   cardList: Card[]
 }
 
+export type TagModifier = {
+  id: string,
+  tagName: Cataglory
+}
+
 export interface IAction {
   type: ACTION_TYPE
-  payload: Card | Card[] | string
+  payload: Card | Card[] | string | TagModifier
 }
 
 export enum ACTION_TYPE {

@@ -3,12 +3,12 @@ import { Card } from "../types"
 import { getDeepLTranslate, getAzureTranslate } from "../utils/getAPIs"
 
 interface ICardItem {
-  item: Card
+  card: Card
   updateCard: (card: Card) => void
 }
 
-const CardBody: FC<ICardItem> = ({ item, updateCard }): ReactElement => {
-  const [userInput, setUserInput] = useState<string>(item.ask)
+const CardBody: FC<ICardItem> = ({ card, updateCard }): ReactElement => {
+  const [userInput, setUserInput] = useState<string>(card.ask)
   const [translated, setTranslate] = useState("")
   const [translated2, setTranslate2] = useState("")
 
@@ -19,24 +19,24 @@ const CardBody: FC<ICardItem> = ({ item, updateCard }): ReactElement => {
 
   function handleSubmit(event: React.KeyboardEvent<HTMLTextAreaElement>) {
     if (event.code == "Enter" && userInput.trim() != "") {
-      updateCard({ ...item, ask: userInput.trim() })
+      updateCard({ ...card, ask: userInput.trim() })
     }
   }
 
   function handleOnBlur() {
     if (userInput.trim() != "") {
-      updateCard({ ...item, ask: userInput.trim() })
+      updateCard({ ...card, ask: userInput.trim() })
     }
   }
 
   useEffect(() => {
-    getDeepLTranslate(item.ask).then((response) => {
+    getDeepLTranslate(card.ask).then((response) => {
       setTranslate2(response)
     })
-    getAzureTranslate(item.ask).then((response) => {
+    getAzureTranslate(card.ask).then((response) => {
       setTranslate(response)
     })
-  }, [item.ask])
+  }, [card.ask])
 
   return (
     <div className='p-5 pb-0 pt-2'>
