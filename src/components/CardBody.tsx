@@ -19,7 +19,7 @@ const CardBody: FC<ICardItem> = ({ card, updateCard }): ReactElement => {
 
   function handleSubmit(event: React.KeyboardEvent<HTMLTextAreaElement>) {
     if (event.code == "Enter" && userInput.trim() != "") {
-      updateCard({ ...card, ask: userInput.trim() })
+      return updateCard({ ...card, ask: userInput.trim() })
     }
   }
 

@@ -17,7 +17,7 @@ function cardReducer(state: IState, action: IAction): IState {
     case ACTION_TYPE.REMOVE_CARD:
       return {
         ...state,
-        cardList: state.cardList.filter(item => item.id !== payload)
+        cardList: state.cardList.filter(item => item.id !== payload as string)
       }
     case ACTION_TYPE.CHANGE_TAG:
       return {
