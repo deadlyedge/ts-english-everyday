@@ -29,6 +29,8 @@ const CardBody: FC<ICardItem> = ({ card, updateCard }): ReactElement => {
     getDeepLTranslate(card.ask).then((response) => {
       setTranslate2(response)
     })
+    setUserInput(card.ask)
+
     // getAzureTranslate(card.ask).then((response) => {
     //   setTranslate(response)
     // })
