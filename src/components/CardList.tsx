@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useReducer } from "react"
 import { ACTION_TYPE, Card, TagModifier } from "../types"
-import { init, initCard } from "../utils/init"
+import { changeCataglory, init, initCard } from "../utils/init"
 import { cardReducer } from "../utils/reducer"
 import CardAdd from "./CardAdd"
 import CardItem from "./CardItem"
@@ -42,10 +42,12 @@ const CardList = () => {
   }, [])
 
   const changeTag = useCallback((tagModifier: TagModifier) => {
-    dispatch({
-      type: ACTION_TYPE.CHANGE_TAG,
-      payload: tagModifier,
-    })
+    changeCataglory(tagModifier).then((question) =>
+      dispatch({
+        type: ACTION_TYPE.CHANGE_TAG,
+        payload: { ...tagModifier, ask: question },
+      })
+    )
   }, [])
 
   return (

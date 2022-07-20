@@ -20,12 +20,14 @@ function cardReducer(state: IState, action: IAction): IState {
         cardList: state.cardList.filter(item => item.id !== payload as string)
       }
     case ACTION_TYPE.CHANGE_TAG:
+      let question = (payload as TagModifier).ask || ''
       return {
         ...state,
         cardList: state.cardList.map((card: Card) =>
           card.id === (payload as TagModifier).id
             ? {
               ...card,
+              ask: question,
               tags: card.tags.map((tag: Tag) =>
                 (tag.tagName === (payload as TagModifier).tagName)
                   ? { ...tag, tagStatus: true }

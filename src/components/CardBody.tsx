@@ -1,4 +1,4 @@
-import React, { FC, ReactElement, useEffect, useState } from "react"
+import React, { FC, ReactElement, useEffect, useRef, useState } from "react"
 import { Card } from "../types"
 import { getDeepLTranslate, getAzureTranslate } from "../utils/getAPIs"
 
@@ -9,17 +9,13 @@ interface ICardItem {
 
 const CardBody: FC<ICardItem> = ({ card, updateCard }): ReactElement => {
   const [userInput, setUserInput] = useState<string>(card.ask)
+  const inputRef = useRef<HTMLTextAreaElement>(null)
   const [translated, setTranslate] = useState("")
   const [translated2, setTranslate2] = useState("")
 
-  function handleInput(event: React.ChangeEvent<HTMLTextAreaElement>) {
-    const askData = event.currentTarget.value
-    setUserInput(askData)
-  }
-
   function handleSubmit(event: React.KeyboardEvent<HTMLTextAreaElement>) {
     if (event.code == "Enter" && userInput.trim() != "") {
-      return updateCard({ ...card, ask: userInput.trim() })
+      updateCard({ ...card, ask: userInput.trim() })
     }
   }
 
@@ -38,6 +34,10 @@ const CardBody: FC<ICardItem> = ({ card, updateCard }): ReactElement => {
     })
   }, [card.ask])
 
+  useEffect(() => {
+    inputRef.current!.value = card.ask
+  })
+
   return (
     <div className='p-5 pb-0 pt-2'>
       <p className='mb-2 p-2 text-gray-900 rounded-lg shadow bg-yellow-50'>
@@ -46,10 +46,11 @@ const CardBody: FC<ICardItem> = ({ card, updateCard }): ReactElement => {
       </p>
       <textarea
         id='message'
+        ref={inputRef}
         rows={4}
         className='duration-200 block p-2 w-full bg-gray-50 text-gray-800 rounded-lg border outline-0 focus:border-blue-300 focus:ring-4 focus:ring-blue-300'
-        defaultValue={userInput}
-        onChange={handleInput}
+        value={userInput}
+        onChange={(e) => setUserInput(e.target.value)}
         onKeyUp={handleSubmit}
         onBlur={handleOnBlur}
       />

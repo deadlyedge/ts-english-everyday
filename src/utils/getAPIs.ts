@@ -11,7 +11,19 @@ const getToday = async (): Promise<string> => {
     const response = await axios.get(ask)
     return response.data
   } catch (error) {
-    return ("something wrong! " + error)
+    return ("some today wrong! " + error)
+  }
+}
+
+// get 'dogs fact' from http://dog-api.kinduff.com
+const getDogFact = async (): Promise<string> => {
+  const API = "http://dog-api.kinduff.com/api/facts"
+
+  try {
+    const response = await axios.get(API)
+    return response.data
+  } catch (error) {
+    return ("some dogs wrong! " + error)
   }
 }
 
@@ -102,4 +114,10 @@ const getAzureTranslate = async (ask: string): Promise<string> => {
   }
 }
 
-export { getDeepLTranslate, getAzureTranslate, getToday, getImage }
+export {
+  getDeepLTranslate,
+  getAzureTranslate,
+  getToday,
+  getImage,
+  getDogFact
+}

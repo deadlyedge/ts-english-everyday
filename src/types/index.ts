@@ -12,22 +12,22 @@ export type Tag = {
 export type Card = {
   id: string,
   ask: string,
-  // imageUrl: string,
   tags: Tag[]
 }
 
 export interface IState {
-  cardList: Card[]
+  cardList: Card[],
 }
 
 export type TagModifier = {
   id: string,
-  tagName: Cataglory
+  ask?: string,
+  tagName: Cataglory,
 }
 
 export interface IAction {
-  type: ACTION_TYPE
-  payload: Card | Card[] | string | TagModifier
+  type: ACTION_TYPE,
+  payload: Card | Card[] | string | TagModifier,
 }
 
 export enum ACTION_TYPE {
