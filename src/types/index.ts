@@ -2,6 +2,8 @@ export enum Cataglory {
   TODAY = 'today',
   CHI_ENG = 'chi>eng',
   DOG = 'dog',
+  QUOTES = 'quotes',
+  FAVQS = 'favqs'
 }
 
 export type Tag = {

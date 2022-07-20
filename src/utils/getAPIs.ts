@@ -15,13 +15,28 @@ const getToday = async (): Promise<string> => {
   }
 }
 
-// get 'dogs fact' from http://dog-api.kinduff.com
-const getDogFact = async (): Promise<string> => {
-  const API = "http://dog-api.kinduff.com/api/facts"
+// get quotes from quote-garden
+const getQuotes = async (): Promise<string> => {
+  const API = "https://quote-garden.herokuapp.com/api/v3/quotes/random"
 
   try {
     const response = await axios.get(API)
-    return response.data
+    let { data: [{ quoteText: quote, quoteAuthor: author }] } = response.data
+    return quote + ' -- ' + author
+  } catch (error) {
+    return ("some dogs wrong! " + error)
+  }
+}
+
+// another quotes api from favqs.com... 
+// sorry I just can't find any funny sentences else
+const getQuotes2 = async (): Promise<string> => {
+  const API = "https://favqs.com/api/qotd"
+
+  try {
+    const response = await axios.get(API)
+    let { quote: { body: quote, author: author } } = response.data
+    return quote + ' -- ' + author
   } catch (error) {
     return ("some dogs wrong! " + error)
   }
@@ -116,8 +131,9 @@ const getAzureTranslate = async (ask: string): Promise<string> => {
 
 export {
   getDeepLTranslate,
-  getAzureTranslate,
+  // getAzureTranslate,
   getToday,
   getImage,
-  getDogFact
+  getQuotes,
+  getQuotes2,
 }

@@ -1,6 +1,6 @@
 import React, { FC, ReactElement, useEffect, useRef, useState } from "react"
 import { Card } from "../types"
-import { getDeepLTranslate, getAzureTranslate } from "../utils/getAPIs"
+import { getDeepLTranslate } from "../utils/getAPIs"
 
 interface ICardItem {
   card: Card
@@ -10,7 +10,7 @@ interface ICardItem {
 const CardBody: FC<ICardItem> = ({ card, updateCard }): ReactElement => {
   const [userInput, setUserInput] = useState<string>(card.ask)
   const inputRef = useRef<HTMLTextAreaElement>(null)
-  const [translated, setTranslate] = useState("")
+  // const [translated, setTranslate] = useState("")
   const [translated2, setTranslate2] = useState("")
 
   function handleSubmit(event: React.KeyboardEvent<HTMLTextAreaElement>) {
@@ -29,9 +29,9 @@ const CardBody: FC<ICardItem> = ({ card, updateCard }): ReactElement => {
     getDeepLTranslate(card.ask).then((response) => {
       setTranslate2(response)
     })
-    getAzureTranslate(card.ask).then((response) => {
-      setTranslate(response)
-    })
+    // getAzureTranslate(card.ask).then((response) => {
+    //   setTranslate(response)
+    // })
   }, [card.ask])
 
   useEffect(() => {
@@ -41,8 +41,9 @@ const CardBody: FC<ICardItem> = ({ card, updateCard }): ReactElement => {
   return (
     <div className='p-5 pb-0 pt-2'>
       <p className='mb-2 p-2 text-gray-900 rounded-lg shadow bg-yellow-50'>
-        azure: {translated} <br />
-        deepL: {translated2}
+        {/* azure: {translated} <br />
+        deepL: {translated2} */}
+        {translated2}
       </p>
       <textarea
         id='message'
