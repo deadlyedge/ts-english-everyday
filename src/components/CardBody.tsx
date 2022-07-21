@@ -58,7 +58,7 @@ const CardBody: FC<ICardItem> = ({ card, updateCard }): ReactElement => {
         onBlur={handleOnBlur}
       />
       <label className='text-gray-400 text-xs ml-3 italic align-top'>
-        press 'enter' for translation
+        press <kbd className="rounded border border-gray-400 border-b-2 px-0.5">enter</kbd> or just tap outside for translation
       </label>
     </div>
   )
