@@ -21,6 +21,7 @@ function cardReducer(state: IState, action: IAction): IState {
       }
     case ACTION_TYPE.CHANGE_TAG:
       let question = (payload as TagModifier).ask || ''
+      // use map(), so the update action just look like distructure.
       return {
         ...state,
         cardList: state.cardList.map((card: Card) =>
