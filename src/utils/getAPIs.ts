@@ -130,8 +130,8 @@ const getAzureTranslate = async (ask: string): Promise<string> => {
 }
 
 export {
-  getDeepLTranslate,
-  // getAzureTranslate,
+  // getDeepLTranslate,
+  getAzureTranslate,
   getToday,
   getImage,
   getQuotes,
