@@ -1,6 +1,6 @@
 import React, { FC, ReactElement, useEffect, useRef, useState } from "react"
 import { Card } from "../types"
-import { getDeepLTranslate, getAzureTranslate } from "../utils/getAPIs"
+import { getDeepLTranslate } from "../utils/getAPIs"
 
 interface ICardItem {
   card: Card
@@ -11,7 +11,6 @@ const CardBody: FC<ICardItem> = ({ card, updateCard }): ReactElement => {
   const [userInput, setUserInput] = useState<string>(card.ask)
   const inputRef = useRef<HTMLTextAreaElement>(null)
   const [translated, setTranslate] = useState("")
-  // const [translated2, setTranslate2] = useState("")
 
   function handleSubmit(event: React.KeyboardEvent<HTMLTextAreaElement>) {
     if (event.code == "Enter" && userInput.trim() != "") {
@@ -26,12 +25,12 @@ const CardBody: FC<ICardItem> = ({ card, updateCard }): ReactElement => {
   }
 
   useEffect(() => {
-    // getDeepLTranslate(card.ask).then((response) => {
-    //   setTranslate2(response)
-    // })
-    getAzureTranslate(card.ask).then((response) => {
+    getDeepLTranslate(card.ask).then((response) => {
       setTranslate(response)
     })
+    // getAzureTranslate(card.ask).then((response) => {
+    //   setTranslate(response)
+    // })
     setUserInput(card.ask)
   }, [card.ask])
 
