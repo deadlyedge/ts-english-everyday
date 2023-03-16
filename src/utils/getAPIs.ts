@@ -3,7 +3,8 @@ import { v4 as uuid } from "uuid"
 
 // get 'today in history' from numbersapi.com
 const getToday = async (): Promise<string> => {
-  const API = "http://numbersapi.com/"
+  const API = "https://numbers.zick.me/"
+  // const API = "http://numbersapi.com/"
   const TODAY = new Date()
   const ask = API + (TODAY.getMonth() + 1) + "/" + TODAY.getDate() + "/date"
 
